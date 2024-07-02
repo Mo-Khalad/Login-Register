@@ -1,21 +1,151 @@
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="icon" href="images/icon-login.png" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="images/icon-login.png">
-    <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel='stylesheet' href="css/style.css"> 
-    
-</head>
+  <body>
+  <nav class="navbar bg-body-tertiary fixed-top">
+    <div class="container-fluid">
+      <button id="btn-login-nav" class="btn btn-outline-light ms-4 me-4 pe-5 ps-5 fs-6" type="submit">
+          LogIn
+      </button>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title text-light" id="offcanvasNavbarLabel">Offcanvas</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item pe-2">
+                <a class="nav-link active fs-6 fw-medium text-light" aria-current="page" href="#">Home</a>
+                <div class="Line"></div>
+              </li>
+              <li class="nav-item pe-2">
+                <a class="nav-link active fs-6 fw-medium text-light" aria-current="page" href="#">About</a>
+                <div class="Line"></div>
+              </li>
+              <li class="nav-item pe-2">
+                <a class="nav-link active fs-6 fw-medium text-light" aria-current="page" href="#">Services</a>
+                <div class="Line"></div>
+              </li>
+              <li class="nav-item pe-2">
+                <a class="nav-link active fs-6 fw-medium text-light" aria-current="page" href="#">Contact</a>
+                <div class="Line"></div>
+              </li>   
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
 
-<body>
+  <div class="wrapper position-relativ h-100 d-flex justify-content-center align-items-center mt-5 " >  
+    <div class="form-wrapper">
+      <form class="text-center form-login-btn position-absolute">
+        <h2 class="mt-5 fw-bold">Log In</h2>
+        <a href="#"> <i id="icon-close" class="fa-solid fa-xmark fs-5 position-absolute"></i> </a>
+        
+        <div class="input-group mt-5">
+          <input class="p-1 m-auto" type="email" name="email" required>
+          <label class="position-absolute">Email</label>
+        </div>
+
+        <div class="input-group mt-4">
+          <input class="p-1 m-auto" type="password" name="password" required>
+          <label class="position-absolute">password</label>
+        </div>
+
+        <div class="remember ms-5 mt-2 text-start">
+          <label class="label-checkbox"><input class="checkbox" type="checkbox"> Remember me </label>
+        </div>
+
+        <button class="btn-login p-2 mt-2">Login</button>
+
+        <div class="signUp-link mt-3">
+          <p> Dont have in account? <a href="#" class="signUpBtn-link">Register</a> </p>
+        </div>       
+      </form>
+
+      <form class="text-center form-sign-up-btn position-absolute">
+        <h2 class="mt-5 fw-bold">Register</h2>
+        <a href="#"> <i id="icon-close" class="fa-solid fa-xmark fs-5 position-absolute"></i> </a>
+        
+        <div class="input-group mt-3">
+          <input class="p-1 m-auto" type="text" name="firstName" required>
+          <label class="position-absolute">firstName</label>
+        </div>
+
+        <div class="input-group mt-3">
+          <input class="p-1 m-auto" type="email" name="email" required>
+          <label class="position-absolute">Email</label>
+        </div>
+
+        <div class="input-group mt-3">
+          <input class="p-1 m-auto" type="password" name="password" required>
+          <label class="position-absolute">password</label>
+        </div>
+
+        <div class="remember ms-5 mt-2 text-start">
+          <label class="label-checkbox"><input class="checkbox" type="checkbox"> Remember me </label>
+        </div>
+
+        <button class="btn-login p-2 mt-2">Login</button>
+
+        <div class="signUp-link mt-3">
+          <p> Dont have in account? <a href="#" class="signInBtn-link">LogIn</a> </p>
+        </div>   
+      </form>
+    </div>         
+  </div>
+
+   
+   
+    <!--
+    </div>
+
+    <h2 class="fw-bold sign-up">Register</h2>
+    <div>
+     <a href="#"> <i id="icon-close" class="fa-solid fa-xmark fs-5 position-absolute p-2"></i> </a>
+    </div>
+    <div class="input-group mt-1">
+        <input class="p-1 m-auto" type="text" name="firstName" required>
+        <label class="position-absolute">firstName</label>
+    </div>
+
+    <div class="input-group mt-3">
+      <input class="p-1 m-auto" type="email" name="email" required>
+      <label class="position-absolute">Email</label>
+  </div>
+
+    <div class="input-group mt-3">
+        <input class="p-1 m-auto" type="password" name="password" required>
+        <label class="position-absolute">password</label>
+    </div>
+
+    <div class="remember ms-5 mt-2 text-start">
+        <label class="label-checkbox"><input class="checkbox" type="checkbox"> Remember me </label>
+    </div>
+
+    <button class="btn-login p-2 mt-2">Login</button>
+
+    <div class="signUp-link mt-3">
+      <p > Dont have in account? <a href="#" class="signUpBtn-link">Register</a> </p>
+  </div>        
+
+   </div>
+  -->
 
 
-    
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
-
-</body>
+  </body>
 </html>
+
+
